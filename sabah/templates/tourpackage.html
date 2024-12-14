@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages - Tourism Sabah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #87CEEB;
+            --turquoise: #40E0D0;
+            --sage-green: #B2B9A8;
+            --sunset-orange: #FF4500;
+            --coral: #FF7F50;
+            --earthy-brown: #8B4513;
+            --beige: #F5F5DC;
+            --golden-yellow: #FFD700;
+            --royal-blue: #4169E1;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--beige);
+            color: var(--earthy-brown);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--sky-blue), var(--turquoise));
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .package-list {
+            text-align: left;
+        }
+
+        .package-item {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--sage-green);
+            color: white;
+            border-radius: 8px;
+        }
+
+        .package-item h3 {
+            color: var(--royal-blue);
+        }
+
+        .package-price {
+            color: var(--coral);
+            font-weight: bold;
+        }
+
+        .learn-more-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--sunset-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .learn-more-button:hover {
+            background-color: var(--coral);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--earthy-brown);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SabahScape</h1>
+    <h1>Tour Packages in Sabah</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/tourpackages/">Tour Package</a></li>
+            <li><a href="/attractions/">Attractions</a></li>
+            <li><a href="/review/">Review</a></li>
+            <li><a href="/profile/">User</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content">
+    <h2>Explore Our Tour Packages</h2>
+    <div class="package-list">
+
+        <!-- 1st Tour Package -->
+        <div class="package-item">
+            <h3>Adventure Sabah Package</h3>
+            <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
+            <p>Explore Mount Kinabalu, trekking through the rainforest, and enjoy thrilling outdoor activities.</p>
+            <p class="package-price">RM 800 / person</p>
+            <a href="/tourpackages/adventure-sabah" class="learn-more-button">Learn More</a>
+        </div>
+
+        <!-- 2nd Tour Package -->
+        <div class="package-item">
+            <h3>Wildlife Sabah Package</h3>
+            <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
+            <p>Get close to wildlife at Sepilok Orangutan Rehabilitation Centre and Kinabatangan River safari.</p>
+            <p class="package-price">RM 600 / person</p>
+            <a href="/tourpackages/wildlife-sabah" class="learn-more-button">Learn More</a>
+        </div>
+
+        <!-- 3rd Tour Package -->
+        <div class="package-item">
+            <h3>Island Getaway Package</h3>
+            <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
+            <p>Relax and enjoy water sports at Tunku Abdul Rahman Marine Park’s stunning islands.</p>
+            <p class="package-price">RM 700 / person</p>
+            <a href="/tourpackages/island-getaway" class="learn-more-button">Learn More</a>
+        </div>
+
+        <!-- 4th Tour Package -->
+        <div class="package-item">
+            <h3>Eco-Tourism Package</h3>
+            <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
+            <p>Experience the wonders of Danum Valley Conservation Area with guided tours through the rainforest.</p>
+            <p class="package-price">RM 850 / person</p>
+            <a href="/tourpackages/eco-tourism" class="learn-more-button">Learn More</a>
+        </div>
+
+        <!-- 5th Tour Package -->
+        <div class="package-item">
+            <h3>Nature Retreat Package</h3>
+            <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
+            <p>Unwind at Poring Hot Springs and explore the lush tropical rainforest on canopy walks.</p>
+            <p class="package-price">RM 550 / person</p>
+            <a href="/tourpackages/nature-retreat" class="learn-more-button">Learn More</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Tourism Sabah. All Rights Reserved.</p>
+    <p>Contact us at: <a href="tel:+60123456789">+60 123 456 789</a> | <a href="mailto:info@sabahscape.com">info@sabahscape.com</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Sabah Package - Tourism Sabah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #87CEEB;
+            --turquoise: #40E0D0;
+            --sage-green: #B2B9A8;
+            --sunset-orange: #FF4500;
+            --coral: #FF7F50;
+            --earthy-brown: #8B4513;
+            --beige: #F5F5DC;
+            --golden-yellow: #FFD700;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--beige);
+            color: var(--earthy-brown);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--sky-blue), var(--turquoise));
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .package-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .text-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+
+        h2, h3 {
+            color: var(--sunset-orange);
+        }
+
+        .book-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--sunset-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .book-button:hover {
+            background-color: var(--coral);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--earthy-brown);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SabahScape</h1>
+    <h1>Adventure Sabah Package</h1>
+</header>
+
+<div class="content">
+    <img src="{% static 'adventure_sabah.jpg' %}" alt="Adventure Sabah" class="package-image">
+    
+    <div class="text-container">
+        <h2>5 Days / 4 Nights</h2>
+        <p>Embark on an exciting journey through the heart of Sabah, where nature's wonders and thrilling activities await! This tour is perfect for adventure enthusiasts seeking to challenge themselves while exploring the breathtaking landscapes of Mount Kinabalu and the surrounding rainforests. Whether you're an experienced hiker or a nature lover, the Adventure Sabah Package offers a blend of adventure, scenic beauty, and local culture that will leave you with lasting memories.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 1: Arrival and Welcome</h3>
+        <p>Begin your adventure in Kota Kinabalu, where you will be greeted by our friendly tour guide. After check-in at your hotel, enjoy a welcome dinner featuring local delicacies, followed by an orientation on the exciting days ahead.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 2: Mount Kinabalu Ascent</h3>
+        <p>Wake up early for a once-in-a-lifetime experience—trekking up Mount Kinabalu, the highest peak in Southeast Asia. Accompanied by an experienced guide, you will traverse lush rainforests, discover diverse flora and fauna, and be awed by spectacular mountain views. The challenging yet rewarding trek is a highlight for any adventurer.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 3: Canopy Walk and Nature Exploration</h3>
+        <p>After descending from Mount Kinabalu, you'll visit the nearby Poring Hot Springs to unwind and relax in natural hot spring pools. In the afternoon, you'll embark on a canopy walk that takes you through the treetops of the rainforest, offering a unique perspective on the ecosystem below.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 4: White Water Rafting Adventure</h3>
+        <p>Gear up for an adrenaline-pumping white water rafting experience on the Padas River, one of Sabah’s most exhilarating rivers. Surrounded by towering mountains and dense forests, the rapids will keep you on the edge of your seat as you navigate through the twists and turns.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 5: Cultural Experience and Departure</h3>
+        <p>Wrap up your adventure by immersing yourself in the local culture with a visit to a traditional village. You'll have the chance to learn about the customs and daily life of indigenous communities, followed by a farewell lunch. In the afternoon, you'll be transferred back to the airport for your flight home.</p>
+    </div>
+
+    <h3>Included Activities:</h3>
+    <ul>
+        <li>Mount Kinabalu trekking</li>
+        <li>Poring Hot Springs and Canopy Walk</li>
+        <li>White water rafting on Padas River</li>
+        <li>Cultural village visit</li>
+        <li>Nature photography opportunities</li>
+    </ul>
+
+    <h3>Package Inclusions:</h3>
+    <ul>
+        <li>Accommodation (4 nights)</li>
+        <li>All meals (breakfast, lunch, and dinner)</li>
+        <li>Guided activities and entrance fees</li>
+        <li>Transport within Sabah (including airport transfers)</li>
+        <li>Professional English-speaking guide</li>
+    </ul>
+
+    <h3>Price: RM 800 / person</h3>
+
+    <a href="/booking/1" class="book-button">Book Now</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Tourism Sabah. All Rights Reserved.</p>
+    <p>Contact us at: <a href="tel:+60123456789">+60 123 456 789</a> | <a href="mailto:info@sabahscape.com">info@sabahscape.com</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review - Tourism Sabah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Color Theme Variables */
+        :root {
+            --sky-blue: #87CEEB;
+            --turquoise: #40E0D0;
+            --sage-green: #B2B9A8;
+            --sunset-orange: #FF4500;
+            --coral: #FF7F50;
+            --earthy-brown: #8B4513;
+            --beige: #F5F5DC;
+            --golden-yellow: #FFD700;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--beige);
+            color: var(--earthy-brown);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--sky-blue), var(--turquoise));
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1, h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav {
+            margin: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: var(--sunset-orange);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--coral);
+        }
+
+        .reviews {
+            margin-top: 20px;
+        }
+
+        .reviews ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reviews li {
+            background: var(--sage-green);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--earthy-brown);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SabahScape</h1>
+    <h1>Submit Your Review</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/tourpackages/">Tour Package</a></li>
+            <li><a href="/attractions/">Attractions</a></li>
+            <li><a href="/review/">Review</a></li>
+            <li><a href="/profile/">User</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content">
+    <h2>Write a Review</h2>
+
+    <form method="POST" action="{% url 'submit_review' %}">
+        {% csrf_token %}
+        
+        <label for="tour_package">Select Tour Package:</label>
+        <select id="tour_package" name="tour_package" required>
+            <option value="">Select a package</option> <!-- Placeholder -->
+            {% for package in tour_packages %}
+                <option value="{{ package.packageID }}">{{ package.name_package }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" required></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <!-- Display existing reviews for the selected tour package -->
+    <h2>Existing Reviews</h2>
+    <div class="reviews">
+        {% if reviews %}
+            <ul>
+                {% for review in reviews %}
+                    <li>
+                        <strong>{{ review.user.username }}:</strong>
+                        <span>Rating: {{ review.rating }}</span>
+                        <p>{{ review.comment }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No reviews yet for this package. Be the first to review!</p>
+        {% endif %}
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Tourism Sabah. All Rights Reserved.</p>
+    <p>Contact us at: <a href="tel:+60123456789">+60 123 456 789</a> | <a href="mailto:info@sabahscape.com">info@sabahscape.com</a></p>
+</footer>
+
+</body>
+</html>

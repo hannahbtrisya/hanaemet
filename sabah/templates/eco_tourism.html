@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Tourism Package - Tourism Sabah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #87CEEB;
+            --turquoise: #40E0D0;
+            --sage-green: #B2B9A8;
+            --sunset-orange: #FF4500;
+            --coral: #FF7F50;
+            --earthy-brown: #8B4513;
+            --beige: #F5F5DC;
+            --golden-yellow: #FFD700;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--beige);
+            color: var(--earthy-brown);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--sky-blue), var(--turquoise));
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .package-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .description-container {
+            background-color: var(--sage-green);
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .book-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--sunset-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .book-button:hover {
+            background-color: var(--coral);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--earthy-brown);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .itinerary-container {
+            background-color: #f9f9f9; /* Light background for the itinerary */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        }
+
+        h3 {
+            color: var(--sunset-orange); /* Change color for headings */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SabahScape</h1>
+    <h1>Eco Tourism Package</h1>
+</header>
+
+<div class="content">
+    <img src="{% static 'eco_tourism.jpg' %}" alt="Eco Tourism" class="package-image">
+    
+    <h2>4 Days / 3 Nights</h2>
+    
+    <div class="description-container">
+        <p>Discover the beauty of Sabah’s natural landscapes while promoting sustainable tourism with our Eco Tourism Package! Engage in activities that support conservation efforts and experience the rich biodiversity that Sabah has to offer. Perfect for eco-conscious travelers and nature lovers!</p>
+    </div>
+
+    <div class="itinerary-container">
+        <h3>Day 1: Arrival and Orientation</h3>
+        <p>Welcome to Kota Kinabalu! After your arrival, you will be greeted by our guide who will provide an orientation about the eco-friendly initiatives in the area. Check in at your eco-lodge and enjoy a relaxing evening surrounded by nature.</p>
+    </div>
+
+    <div class="itinerary-container">
+        <h3>Day 2: Wildlife Sanctuary Visit</h3>
+        <p>Embark on a guided tour to the Lok Kawi Wildlife Park, where you will learn about Sabah’s native wildlife and conservation efforts. Participate in activities that help preserve natural habitats and support local wildlife.</p>
+    </div>
+
+    <div class="itinerary-container">
+        <h3>Day 3: Nature Trekking and Community Engagement</h3>
+        <p>Join a guided trek through the lush rainforests of Kinabalu Park. Engage with local communities to understand their sustainable practices and partake in a community-based conservation project that contributes to the preservation of their environment.</p>
+    </div>
+
+    <div class="itinerary-container">
+        <h3>Day 4: Cultural Experience and Departure</h3>
+        <p>Before departing, enjoy a cultural experience with local indigenous groups, learning about their traditions and conservation methods. Afterward, you will be transferred back to the airport for your journey home.</p>
+    </div>
+
+    <h3>Included Activities:</h3>
+    <ul>
+        <li>Visit to Lok Kawi Wildlife Park</li>
+        <li>Guided nature trekking</li>
+        <li>Community engagement activities</li>
+        <li>Cultural experience with local communities</li>
+    </ul>
+
+    <h3>Package Inclusions:</h3>
+    <ul>
+        <li>Accommodation (3 nights in eco-lodge)</li>
+        <li>All meals (breakfast, lunch, and dinner)</li>
+        <li>Guided activities and entrance fees</li>
+        <li>Transport within Sabah (including airport transfers)</li>
+        <li>Professional English-speaking guide</li>
+    </ul>
+
+    <h3>Price: RM 900 / person</h3>
+
+    <a href="/booking/4" class="book-button">Book Now</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Tourism Sabah. All Rights Reserved.</p>
+    <p>Contact us at: <a href="tel:+60123456789">+60 123 456 789</a> | <a href="mailto:info@sabahscape.com">info@sabahscape.com</a></p>
+</footer>
+
+</body>
+</html>

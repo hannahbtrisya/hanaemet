@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island Getaway Package - Tourism Sabah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #87CEEB;
+            --turquoise: #40E0D0;
+            --sage-green: #B2B9A8;
+            --sunset-orange: #FF4500;
+            --coral: #FF7F50;
+            --earthy-brown: #8B4513;
+            --beige: #F5F5DC;
+            --golden-yellow: #FFD700;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--beige);
+            color: var(--earthy-brown);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--sky-blue), var(--turquoise));
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .package-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .text-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+
+        h2, h3 {
+            color: var(--sunset-orange);
+        }
+
+        .book-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--sunset-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .book-button:hover {
+            background-color: var(--coral);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--earthy-brown);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SabahScape</h1>
+    <h1>Island Getaway Package</h1>
+</header>
+
+<div class="content">
+    <img src="{% static 'island_getaway.jpg' %}" alt="Island Getaway" class="package-image">
+    
+    <div class="text-container">
+        <h2>3 Days / 2 Nights</h2>
+        <p>Escape to paradise with our Island Getaway Package! Discover the stunning Tunku Abdul Rahman Marine Park, where you can relax on pristine beaches, snorkel in crystal-clear waters, and indulge in exciting water sports. This package is perfect for beach lovers and adventure seekers alike.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 1: Arrival and Beach Relaxation</h3>
+        <p>Arrive in Kota Kinabalu and take a boat ride to the beautiful islands of Tunku Abdul Rahman Marine Park. Check in at your beachfront resort and spend the day lounging on the soft sands, swimming in the turquoise waters, or exploring the vibrant marine life while snorkeling.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 2: Water Sports and Island Hopping</h3>
+        <p>Enjoy a day full of adventure with a variety of water sports. Try your hand at jet skiing, parasailing, or banana boat rides. In the afternoon, embark on an island-hopping tour, visiting the stunning islands of Manukan, Sapi, and Mamutik.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 3: Leisure and Departure</h3>
+        <p>Spend your final morning soaking in the sun or exploring more of the marine park. Enjoy a farewell lunch with local flavors before your transfer back to the airport for departure.</p>
+    </div>
+
+    <h3>Included Activities:</h3>
+    <ul>
+        <li>Boat transfers to Tunku Abdul Rahman Marine Park</li>
+        <li>Snorkeling equipment rental</li>
+        <li>Water sports activities</li>
+        <li>Island-hopping tour</li>
+    </ul>
+
+    <h3>Package Inclusions:</h3>
+    <ul>
+        <li>Accommodation (2 nights)</li>
+        <li>All meals (breakfast, lunch, and dinner)</li>
+        <li>Guided activities and entrance fees</li>
+        <li>Transport within Sabah (including airport transfers)</li>
+        <li>Professional English-speaking guide</li>
+    </ul>
+
+    <h3>Price: RM 700 / person</h3>
+
+    <a href="/booking/3" class="book-button">Book Now</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Tourism Sabah. All Rights Reserved.</p>
+    <p>Contact us at: <a href="tel:+60123456789">+60 123 456 789</a> | <a href="mailto:info@sabahscape.com">info@sabahscape.com</a></p>
+</footer>
+
+</body>
+</html>

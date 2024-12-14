@@ -1,0 +1,167 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <style>
+        /* Color Theme Variables */
+        :root {
+            --sky-blue: #87CEEB; /* Sky Blue */
+            --turquoise: #40E0D0; /* Turquoise */
+            --sage-green: #B2B9A8; /* Sage Green */
+            --sunset-orange: #FF4500; /* Sunset Orange */
+            --coral: #FF7F50; /* Coral */
+            --earthy-brown: #8B4513; /* Earthy Brown */
+            --beige: #F5F5DC; /* Beige */
+            --golden-yellow: #FFD700; /* Golden Yellow */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif; /* Updated font */
+            margin: 0;
+            padding: 0;
+            background-color: var(--beige);
+            color: var(--earthy-brown);
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center align */
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--sky-blue), var(--turquoise));
+            padding: 20px;
+            text-align: center;
+            color: white;
+            width: 100%; /* Ensure header spans the entire width */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin: 15px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: var(--sage-green); /* Background for the login form */
+            color: white;
+            border-radius: 8px;
+            width: 90%; /* Width of the section */
+            max-width: 500px; /* Max width for larger screens */
+            text-align: left; /* Left-align text */
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block; /* Stack labels above inputs */
+            margin: 10px 0 5px; /* Margin for spacing */
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%; /* Full width inputs */
+            padding: 10px; /* Padding inside inputs */
+            margin-bottom: 15px; /* Space below inputs */
+            border: 1px solid #ccc; /* Border style */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        button {
+            background-color: var(--sunset-orange); /* Button color */
+            color: white; /* Text color */
+            padding: 10px 15px; /* Padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer on hover */
+            font-size: 1em; /* Font size */
+            transition: background 0.3s; /* Transition for hover */
+        }
+
+        button:hover {
+            background-color: var(--coral); /* Change color on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--earthy-brown);
+            color: white;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Error message styles */
+        .error {
+            color: red; /* Error message color */
+            margin: 10px 0; /* Margin for spacing */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SabahScape</h1>
+        <h1>Login to Tourism Sabah</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/register/">Register</a></li>
+                <li><a href="/login/">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Login to Your Account</h2>
+        
+        <!-- Display error message if login fails -->
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST" action="/login/">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tourism Sabah. All Rights Reserved.</p>
+        <p>Contact us at: <a href="tel:+60123456789">+60 123 456 789</a> | <a href="mailto:info@sabahscape.com">info@sabahscape.com</a></p>
+    </footer>
+</body>
+</html>

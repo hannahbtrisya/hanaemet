@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions - Tourism Sabah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Google Font -->
+</head>
+<style>
+    /* Color Theme Variables */
+    :root {
+        --sky-blue: #87CEEB; /* Sky Blue */
+        --turquoise: #40E0D0; /* Turquoise */
+        --sage-green: #B2B9A8; /* Sage Green */
+        --sunset-orange: #FF4500; /* Sunset Orange */
+        --coral: #FF7F50; /* Coral */
+        --earthy-brown: #8B4513; /* Earthy Brown */
+        --beige: #F5F5DC; /* Beige */
+        --golden-yellow: #FFD700; /* Golden Yellow */
+        --royal-blue: #4169E1; /* Royal Blue */
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--beige);
+        color: var(--earthy-brown);
+    }
+    
+    header {
+        background: linear-gradient(to right, var(--sky-blue), var(--turquoise));
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+    
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+    
+    nav {
+        margin: 15px 0;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    .content {
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .attraction-list {
+        text-align: left;
+    }
+    
+    .attraction-item {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: var(--sage-green);
+        color: white;
+        border-radius: 8px;
+    }
+
+    .attraction-item h3 {
+        color: var(--royal-blue);
+    }
+
+    .attraction-item img {
+        width: 100%; /* Set the width to 100% to fit the container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Optional: add border-radius to images */
+    }
+
+    .tour-packages {
+        margin-top: 10px;
+    }
+
+    .tour-packages h4 {
+        margin: 5px 0;
+        color: var(--coral);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: var(--earthy-brown);
+        color: white;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+<body>
+    {% load static %} 
+<header>
+    <h1>SabahScape</h1>
+    <h1>Explore Attractions in Sabah</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/tourpackages/">Tour Package</a></li>
+            <li><a href="/attractions/">Attractions</a></li>
+            <li><a href="/review/">Review</a></li>
+            <li><a href="/profile/">User</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="content">
+    <h2>Top 8 Attractions and Their Tour Packages</h2>
+    <div class="attraction-list">
+
+        <!-- 1st Attraction -->
+        <div class="attraction-item">
+            <img src="{% static 'kinabalu.jpg' %}" alt="Mount Kinabalu" style="width:100%; height:auto;">
+            <h3>Mount Kinabalu</h3>
+            <p><strong>Location:</strong> Ranau, Sabah</p>
+            <p>Mount Kinabalu is the highest peak in Southeast Asia, offering challenging hikes and breathtaking views.</p>
+            <div class="tour-packages">
+                <h4>Included in Tour Package:</h4>
+                <p><strong>Adventure Sabah Package</strong> - RM 800 / person</p>
+            </div>
+        </div>
+
+        <!-- 2nd Attraction -->
+        <div class="attraction-item">
+            <img src="{% static 'orangutan.jpg' %}" alt="Sepilok Orangutan Rehabilitation Centre" style="width:100%; height:auto;">
+            <h3>Sepilok Orangutan Rehabilitation Centre</h3>
+            <p><strong>Location:</strong> Sandakan, Sabah</p>
+            <p>Visit the iconic orangutans in their natural habitat at the Sepilok Rehabilitation Centre in Sandakan.</p>
+            <div class="tour-packages">
+                <h4>Included in Tour Package:</h4>
+                <p><strong>Wildlife Sabah Package</strong> - RM 600 / person</p>
+            </div>
+        </div>
+
+        <!-- 3rd Attraction -->
+        <div class="attraction-item">
+            <img src="{% static 'marine park.jpg' %}" alt="Tunku Abdul Rahman Marine Park" style="width:100%; height:auto;">
+            <h3>Tunku Abdul Rahman Marine Park</h3>
+            <p><strong>Location:</strong> Kota Kinabalu, Sabah</p>
+            <p>Enjoy snorkeling, scuba diving, and island-hopping in this marine park near Kota Kinabalu.</p>
+            <div class="tour-packages">
+                <h4>Included in Tour Package:</h4>
+                <p><strong>Island Getaway Package</strong> - RM 700 / person</p>
+            </div>
+        </div>
+
+        <!-- 4th Attraction -->
+        <div class="attraction-item">
+            <img src="{% static 'danum.jpg' %}" alt="Danum Valley Conservation Area" style="width:100%; height:auto;">
+            <h3>Danum Valley Conservation Area</h3>
+            <p><strong>Location:</strong> Lahad Datu, Sabah</p>
+            <p>Explore pristine rainforests and rare wildlife in the Danum Valley Conservation Area.</p>
+            <div class="tour-packages">
+                <h4>Included in Tour Package:</h4>
+                <p><strong>Eco-Tourism Package</strong> - RM 850 / person</p>
+            </div>
+        </div>
+
+        <!-- 5th Attraction -->
+        <div class="attraction-item">
+            <img src="{% static 'poring.jpg' %}" alt="Poring Hot Springs" style="width:100%; height:auto;">
+            <h3>Poring Hot Springs</h3>
+            <p><strong>Location:</strong> Ranau, Sabah</p>
+            <p>Relax in the hot springs and explore the canopy walkways of Poring in the lush tropical rainforest.</p>
+            <div class="tour-packages">
+                <h4>Included in Tour Package:</h4>
+                <p><strong>Nature Retreat Package</strong> - RM 550 / person</p>
+            </div>
+        </div>
+
+        <!-- 6th Attraction -->
+        <div class="attraction-item">
+            <img src="{% static 'rainforest.jpg' %}" alt="Poring Rainforest Canopy Walk" style="width:100%; height:auto;">
+            <h3>Poring Rainforest Canopy Walk</h3>
+            <p><strong>Location:</strong> Ranau, Sabah</p>
+            <p>Take a thrilling walk high above the ground through the rainforest canopy at Poring.</p>
+            <div class="tour-packages">
+                <h4>Included in Tour Package:</h4>
+                <p><strong>Nature Retreat Package</strong> - RM 550 / person</p>
+            </div>
+        </div>
+
+        <!-- 7th Attraction -->
+        <div class="attraction-item">
+            <img src="{% static 'mabul.jpeg' %}" alt="Mabul Island" style="width:100%; height:auto;">
+            <h3>Mabul Island</h3>
+            <p><strong>Location:</strong> Semporna, Sabah</p>
+            <p>Discover crystal clear waters and vibrant marine life in this stunning island paradise, perfect for diving and snorkeling.</p>
+            <div class="tour-packages">
+                <h4>Included in Tour Package:</h4>
+                <p><strong>Island Getaway Package</strong> - RM 700 / person</p>
+            </div>
+        </div>
+
+        <!-- 8th Attraction -->
+        <div class="attraction-item">
+            <img src="{% static 'desa.jpg' %}" alt="Desa Dairy Farm" style="width:100%; height:auto;">
+            <h3>Desa Dairy Farm</h3>
+            <p><strong>Location:</strong> Kundasang, Sabah</p>
+            <p>Enjoy scenic views of Mount Kinabalu and visit this highland dairy farm to experience the "New Zealand of Sabah."</p>
+            <div class="tour-packages">
+                <h4>Included in Tour Package:</h4>
+                <p><strong>Adventure Sabah Package</strong> - RM 800 / person</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Tourism Sabah. All Rights Reserved.</p>
+    <p>Contact us at: <a href="tel:+60123456789">+60 123 456 789</a> | <a href="mailto:info@sabahscape.com">info@sabahscape.com</a></p>
+</footer>
+
+</body>
+</html>

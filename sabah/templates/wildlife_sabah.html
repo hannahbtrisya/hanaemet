@@ -1,0 +1,173 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Sabah Package - Tourism Sabah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #87CEEB;
+            --turquoise: #40E0D0;
+            --sage-green: #B2B9A8;
+            --sunset-orange: #FF4500;
+            --coral: #FF7F50;
+            --earthy-brown: #8B4513;
+            --beige: #F5F5DC;
+            --golden-yellow: #FFD700;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--beige);
+            color: var(--earthy-brown);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--sky-blue), var(--turquoise));
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .package-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .text-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+
+        h2, h3 {
+            color: var(--sunset-orange);
+        }
+
+        .book-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--sunset-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .book-button:hover {
+            background-color: var(--coral);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--earthy-brown);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SabahScape</h1>
+    <h1>Wildlife Sabah Package</h1>
+</header>
+
+<div class="content">
+    <img src="{% static 'wildlife_sabah.jpg' %}" alt="Wildlife Sabah" class="package-image">
+    
+    <div class="text-container">
+        <h2>4 Days / 3 Nights</h2>
+        <p>Experience the incredible biodiversity of Sabah with our Wildlife Sabah Package! This tour is designed for nature lovers and wildlife enthusiasts eager to encounter unique species in their natural habitats. From the lush rainforests to the beautiful islands, you'll witness the wonders of Sabah's wildlife up close, including orangutans, pygmy elephants, and vibrant birdlife.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 1: Arrival and Kinabatangan River Cruise</h3>
+        <p>Upon arrival at Sandakan Airport, you'll be greeted by our guide and transferred to your lodge by the Kinabatangan River. Enjoy an evening river cruise where you can spot playful proboscis monkeys, crocodiles, and a variety of birds as the sun sets over the horizon.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 2: Jungle Trekking and Wildlife Spotting</h3>
+        <p>After breakfast, embark on a guided jungle trek into the heart of the rainforest. Look out for orangutans swinging through the trees, pygmy elephants, and diverse flora and fauna. In the afternoon, visit an observation tower for a breathtaking view of the forest canopy and its inhabitants.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 3: Sepilok Orangutan Rehabilitation Centre</h3>
+        <p>Visit the Sepilok Orangutan Rehabilitation Centre to learn about the conservation efforts for these magnificent creatures. Witness the feeding session and take part in an educational tour. Later, enjoy a leisurely afternoon at the Rainforest Discovery Centre, where you can walk along the canopy walkway and explore the gardens.</p>
+    </div>
+
+    <div class="text-container">
+        <h3>Day 4: Departure</h3>
+        <p>After breakfast, enjoy some last-minute wildlife spotting before checking out. You'll be transferred back to Sandakan Airport for your departure flight, taking with you unforgettable memories of Sabah's incredible wildlife.</p>
+    </div>
+
+    <h3>Included Activities:</h3>
+    <ul>
+        <li>Kinabatangan River cruise</li>
+        <li>Guided jungle trekking</li>
+        <li>Visit to Sepilok Orangutan Rehabilitation Centre</li>
+        <li>Canopy walkway exploration</li>
+        <li>Wildlife photography opportunities</li>
+    </ul>
+
+    <h3>Package Inclusions:</h3>
+    <ul>
+        <li>Accommodation (3 nights)</li>
+        <li>All meals (breakfast, lunch, and dinner)</li>
+        <li>Guided activities and entrance fees</li>
+        <li>Transport within Sabah (including airport transfers)</li>
+        <li>Professional English-speaking guide</li>
+    </ul>
+
+    <h3>Price: RM 700 / person</h3>
+
+    <a href="/booking/2" class="book-button">Book Now</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Tourism Sabah. All Rights Reserved.</p>
+    <p>Contact us at: <a href="tel:+60123456789">+60 123 456 789</a> | <a href="mailto:info@sabahscape.com">info@sabahscape.com</a></p>
+</footer>
+
+</body>
+</html>
